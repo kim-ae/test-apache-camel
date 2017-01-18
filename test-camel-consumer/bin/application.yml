@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: camel-test
+server:
+  port: 8181
+broker:
+  url: tcp://localhost:61616
+  user: admin
+  password: admin
+  in.produce.queue: camel.test.in.queue
+  in.queue: activemq:queue:camel.test.in.queue
+  out.queue: activemq:queue:camel.test.out.queue
+  dead.letter.queue: activemq:queue:camel.test.in.dead.letter.queue
